@@ -20,14 +20,58 @@ height:100px;
 background:#ffd6e6;
 border-radius:78px;
 margin:20px;
+display:flex;
+align-items:center;
 }
+
+.header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+width:100%;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:#d94b87;
+}
+
+.nav a{
+margin:0 10px;
+text-decoration:none;
+color:#d94b87;
+font-size:14px;
+}
+
+/* HERO */
 
 .hero{
 height:450px;
 background:#f9c6da;
 margin:40px 20px;
 border-radius:40px;
+display:flex;
+align-items:center;
 }
+
+.hero h1{
+font-size:40px;
+color:white;
+margin-bottom:10px;
+}
+
+.hero p{
+color:white;
+margin-bottom:20px;
+}
+
+
+h2{
+color:#d94b87;
+font-size:28px;
+}
+
 
 .cards{
 display:flex;
@@ -40,6 +84,39 @@ flex:1;
 height:220px;
 background:#ffd6e6;
 border-radius:25px;
+padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.card-title{
+font-weight:600;
+color:#d94b87;
+}
+
+.price{
+margin:10px 0;
+}
+
+
+.btn{
+background:#ff4f93;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.btn.big{
+padding:12px 24px;
+font-size:16px;
+}
+
+.btn.small{
+align-self:flex-start;
+font-size:12px;
 }
 
 .review{
@@ -47,6 +124,10 @@ height:60px;
 background:#f59ac1;
 border-radius:20px;
 margin:15px 0;
+display:flex;
+align-items:center;
+padding:0 20px;
+color:white;
 }
 
 .about-box{
@@ -54,11 +135,27 @@ height:350px;
 background:#ffd6e6;
 border-radius:25px;
 margin-top:40px;
+padding:30px;
 }
+
+.about-box h3{
+color:#d94b87;
+margin-bottom:10px;
+}
+
 
 .footer{
 height:200px;
 background:#d96b9d;
 border-radius:40px;
 margin:40px 20px;
+display:flex;
+align-items:center;
+}
+
+.footer-inner{
+display:flex;
+justify-content:space-around;
+width:100%;
+color:white;
 }
