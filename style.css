@@ -15,8 +15,6 @@ margin:0 auto;
 padding:40px;
 }
 
-/* HEADER */
-
 .header{
 height:100px;
 background:#ffd6e6;
@@ -46,8 +44,6 @@ color:#d94b87;
 font-size:14px;
 }
 
-/* HERO */
-
 .hero{
 height:450px;
 background:#f9c6da;
@@ -68,14 +64,11 @@ color:white;
 margin-bottom:20px;
 }
 
-/* SECTIONS */
 
 h2{
 color:#d94b87;
 font-size:28px;
 }
-
-/* CARDS */
 
 .cards{
 display:flex;
@@ -103,8 +96,6 @@ color:#d94b87;
 margin:10px 0;
 }
 
-/* BUTTONS */
-
 .btn{
 background:#ff4f93;
 color:white;
@@ -124,8 +115,6 @@ align-self:flex-start;
 font-size:12px;
 }
 
-/* REVIEWS */
-
 .review{
 height:60px;
 background:#f59ac1;
@@ -136,8 +125,6 @@ align-items:center;
 padding:0 20px;
 color:white;
 }
-
-/* ABOUT */
 
 .about-box{
 height:350px;
@@ -151,8 +138,6 @@ padding:30px;
 color:#d94b87;
 margin-bottom:10px;
 }
-
-/* FOOTER */
 
 .footer{
 height:200px;
