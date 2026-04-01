@@ -263,37 +263,41 @@ justify-content:space-around;
 width:100%;
 color:white;
 }
-@media (max-width: 768px){
-
-  .container{
-    padding: 20px;
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
   }
 
-  .header-inner{
-    grid-template-columns: 1fr;
-    gap: 15px;
-    text-align: center;
+  .header-inner {
+    grid-template-columns: 1fr; /* логотип и кнопка в колонку */
+    gap: 10px;
+    width: 100%;
   }
 
-  .nav{
-    justify-content: center;
-    flex-wrap: wrap;
+  .logo {
+    justify-self: start;
+    font-size: 18px;
   }
 
-  .header-inner .btn{
-    justify-self: center;
+  .nav {
+    justify-self: start;
+    flex-direction: row; /* важно: ряд */
+    gap: 10px;
+    overflow-x: auto; /* если не помещается */
+    width: 100%;
+    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
   }
 
-  .hero{
-    height: 600px;
-    margin: 20px;
+  .nav a {
+    white-space: nowrap; /* чтобы ссылки не переносились */
+    font-size: 14px;
   }
 
-  .hero-inner{
-    padding-left: 20px;
-    padding-bottom: 90px;
+  .header-inner .btn {
+    justify-self: start;
   }
-
   .hero h1{
     font-size: 28px;
   }
@@ -310,5 +314,8 @@ color:white;
     flex-direction: column;
     gap: 15px;
     text-align: center;
+  }
+  .container{
+    padding: 20px;
   }
 }
