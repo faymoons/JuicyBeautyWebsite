@@ -82,8 +82,8 @@ body {
 }
 
   .header-inner {
-    display: flex;            /* меняем grid на flex */
-    flex-direction: row;      /* логотип + кнопка в ряд */
+    display: flex;          
+    flex-direction: row;     
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -96,10 +96,10 @@ body {
 
   .nav {
     display: flex;
-    flex-direction: row;      /* меню в ряд */
+    flex-direction: row;      
     gap: 10px;
-    overflow-x: auto;         /* горизонтальная прокрутка */
-    margin-top: 10px;         /* под логотипом+кнопкой */
+    overflow-x: auto;        
+    margin-top: 10px;         
     width: 100%;
     -webkit-overflow-scrolling: touch;
   }
@@ -110,7 +110,6 @@ body {
   }
 
   .header-inner .btn {
-    /* кнопка уже в ряду с логотипом */
   }
 
   /* HERO */
