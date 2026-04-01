@@ -76,6 +76,11 @@ body {
     padding: 10px 20px;
   }
 
+  .logo img {
+  height: 30px; /* вместо 50px на десктопе */
+  width: auto;
+}
+
   .header-inner {
     display: flex;            /* меняем grid на flex */
     flex-direction: row;      /* логотип + кнопка в ряд */
