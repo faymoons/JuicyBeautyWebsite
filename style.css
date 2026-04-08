@@ -15,11 +15,11 @@ html, body {
     height: 100vh;           
     width: 100vw;            
     display: flex;
-    align-items: center;     /* Vertical center */
-    justify-content: center;   /* Horizontal center */
+    align-items: center;   
+    justify-content: center;   
     background: #FFF1F6;
     overflow: hidden;        
-    position: relative;        /* Extra safety */
+    position: relative;      
 }
  
 @font-face {
@@ -240,7 +240,7 @@ h2 {
   align-items: center;
   gap: 15px;
   background: #f59ac1;
-  border-radius: 50px; /* Higher radius for pill shape */
+  border-radius: 50px; 
   padding: 10px 20px;
   margin: 15px 0;
   color: white;
@@ -250,8 +250,8 @@ h2 {
 .review-avatar {
   width: 50px;
   height: 50px;
-  background: #ffd6e6; /* Placeholder color */
-  border-radius: 50%; /* Makes it a circle */
+  background: #ffd6e6; 
+  border-radius: 50%; 
   flex-shrink: 0;
   border: 2px solid white;
 }
@@ -289,7 +289,7 @@ h2 {
 
 .about-card {
   display: flex;
-  background-color: #ffd6e6;; /* Light pink background from image */
+  background-color: #ffd6e6;; 
   border-radius: 30px;
   overflow: hidden;
   align-items: stretch;
@@ -306,7 +306,7 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px; /* Rounded corners for the image itself */
+  border-radius: 20px;
 }
 
 .about-content {
@@ -314,7 +314,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #d94b87; /* Main text color */
+  color: #d94b87;
 }
 
 .about-content h3 {
@@ -322,7 +322,7 @@ h2 {
   font-size: 32px;
   line-height: 1.2;
   margin-bottom: 30px;
-  color: #c93d79; /* Darker pink for heading */
+  color: #c93d79; 
 }
 
 .about-content p {
@@ -344,7 +344,7 @@ h2 {
 }
 
 .about-features li strong {
-  display: block; /* Makes the title of the feature sit above the description */
+  display: block;
   font-weight: bold;
 }
 
@@ -521,7 +521,7 @@ SECOND
 .auth-form {
     flex: 1;
     padding: 50px;
-    background: #ffd6e6; /* Same light pink as your header */
+    background: #ffd6e6; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -602,6 +602,6 @@ SECOND
 }
 
 .btn:hover {
-  background-color: #d94b87; /* Slightly darker pink on hover */
-  transform: scale(1.05);    /* Tiny zoom effect */
+  background-color: #d94b87; 
+  transform: scale(1.05);  
 }
