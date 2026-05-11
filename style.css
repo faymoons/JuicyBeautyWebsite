@@ -112,26 +112,86 @@ body {
   background-image: url("images/heroback.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  margin: 40px 20px;
-  border-radius: 40px;
+  
+  /* ЦІ РЯДКИ ВАЖЛИВІ */
   display: flex;
-  align-items: center;
+  align-items: flex-end;   /* Притискаємо вміст до низу */
+  justify-content: flex-start; /* Вирівнюємо по лівому краю */
 }
 
+/* Оновлений блок із прозорим фоном */
 .hero-inner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding-left: 60px;
-  padding-bottom: 120px;
+    margin-left: 0; 
+    margin-bottom: 20px; 
+    padding: 30px;
+    max-width: 500px;
+    
+    /* Скляний ефект */
+    background: rgba(255, 255, 255, 0.2); /* Можна трохи зменшити непрозорість для кращого вигляду */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    /* Зміна кольору тексту */
+    color: white; 
 }
 
+/* Окремо прописуємо колір для заголовка всередині, якщо він перебивається іншими стилями */
+.hero-inner h1 {
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+/* Колір для тексту опису */
+.hero-inner p {
+    color: white;
+    opacity: 0.9; /* Можна додати легку прозорість для елегантності */
+    margin-bottom: 0; /* Оскільки кнопка тепер зовні, цей відступ не потрібен */
+}
+
+/* СТИЛІ ДЛЯ МОБІЛКИ (екран менше 768px) */
+@media (max-width: 768px) {
+  .hero-inner {
+    margin-left: 15px;      /* Зменшуємо відступ від краю екрана */
+    margin-right: 15px;     /* Додаємо правий відступ, щоб не липло */
+    margin-bottom: 60px;    /* Притискаємо ближче до стрічки */
+    
+    padding: 20px;          /* Робимо внутрішні відступи меншими (це головне!) */
+    max-width: 90%;         /* Тепер коробка не буде на весь екран */
+    border-radius: 25px;    /* Менше скруглення для маленького екрана */
+  }
+
+  .hero h1 {
+    font-size: 20px;        /* Зменшуємо шрифт заголовка */
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 14px;        /* Зменшуємо шрифт опису */
+    margin-bottom: 15px;
+  }
+  
+  .hero .btn.big {
+    padding: 10px 20px;     /* Робимо кнопку трохи компактнішою */
+    font-size: 14px;
+  }
+}
+.hero .btn.big {
+  margin-top: 20px; /* Створює відступ між текстом і кнопкою */
+  display: inline-block; /* Щоб відступи працювали коректно */
+  align-self: flex-start; /* Кнопка буде зліва, а не на всю ширину */
+}
+
+/* Стилі для тексту всередині, щоб прибрати зайві відступи */
 .hero h1 {
-  font-family: "TheSeasons", sans-serif;
-  font-size: 28px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-bottom: 10px; /* Зменшили нижній відступ тексту, бо тепер є margin-top у кнопки */
 }
 
 /* TICKER */
@@ -444,20 +504,25 @@ h2 {
   .container {
     padding: 20px;
   }
-
+  
+  {
   .hero-inner {
-    padding-left: 20px;
-    padding-bottom: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    padding: 25px;
+    max-width: calc(100% - 40px);
   }
-
+  
   .hero h1 {
-    font-size: 22px;
+    font-size: 24px;
   }
+}
 
   .cards {
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: 1fr;
   }
+}
 
   .card {
     height: auto;
@@ -609,3 +674,233 @@ SECOND
   background-color: #d94b87; 
   transform: scale(1.05);  
 }
+@media (max-width: 768px) {
+  .hero {
+    height: 600px; /* уменьшаем картинку */
+    margin: 20px 10px;
+    border-radius: 25px;
+    background-position: top center;
+  }
+
+  .hero-inner {
+    padding-left: 20px;
+    padding-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .ticker {
+    border-radius: 0 0 25px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 480px; /* ещё меньше на совсем маленьких экранах */
+  }
+}
+/* MENU BUTTON */
+.menu-btn {
+  background: #ff4f93;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Couture", sans-serif;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: #d94b87;
+}
+
+/* Кнопка кошика */
+.cart-btn {
+  background: #ff4f93;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  
+  /* ЦЕ ВИПРАВИТЬ РОЗТЯГУВАННЯ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;  /* Кнопка буде лише такої ширини, як іконка всередині */
+  justify-self: end;   /* Притисне її вправо і не дасть розтягнутися */
+  
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background: #d94b87;
+}
+
+/* POPUP BACKGROUND */
+.menu-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* POPUP ACTIVE */
+.menu-popup.active {
+  display: flex;
+}
+
+/* POPUP BOX */
+.menu-popup-content {
+  width: 90%;
+  max-width: 420px;
+  background: #fff1f6;
+  border-radius: 35px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: popupFade 0.25s ease;
+}
+
+/* HEADER INSIDE POPUP */
+.menu-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.menu-popup-header h3 {
+  font-family: "TheSeasons", sans-serif;
+  color: #d94b87;
+  font-size: 28px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  background: #ff4f93;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #d94b87;
+}
+
+/* CATEGORY LINKS */
+.menu-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-categories a {
+  text-decoration: none;
+  background: #ffd6e6;
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-family: "Couture", sans-serif;
+  font-size: 13px;
+  color: #d94b87;
+  transition: 0.3s;
+}
+
+.menu-categories a:hover {
+  background: #ff4f93;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* POPUP ANIMATION */
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Додаємо нову обгортку, щоб елементи йшли один під одним */
+.hero-inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Вирівнювання по лівому краю */
+    margin-left: 60px;
+    margin-bottom: 80px;
+    z-index: 2;
+}
+
+/* Прибираємо старі відступи з самого скла, бо вони тепер в обгортці */
+.hero-inner {
+    margin-left: 0; 
+    margin-bottom: 20px; /* Відступ між склом і кнопкою */
+    padding: 30px;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Стиль для окремої кнопки */
+.hero-standalone-btn {
+    margin-top: 10px;
+    box-shadow: 0 10px 20px rgba(217, 75, 135, 0.3); /* Додамо тіні, щоб вона виділялася на фоні */
+}
+
+/* Корекція для мобілки */
+@media (max-width: 768px) {
+    .hero-inner-wrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 60px;
+    }
+    
+    .hero-inner {
+        max-width: 100%;
+    }
+}
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Более мягкая анимация для карточек */
+.card.scroll-animate {
+  transform: translateY(40px) scale(0.98);
+}
+
+.card.scroll-animate.show {
+  transform: translateY(0) scale(1);
+}
+
+/* Небольшая задержка для красивого каскада */
+.scroll-delay-1 { transition-delay: 0.1s; }
+.scroll-delay-2 { transition-delay: 0.2s; }
+.scroll-delay-3 { transition-delay: 0.3s; }
+.scroll-delay-4 { transition-delay: 0.4s; }
+.scroll-delay-5 { transition-delay: 0.5s; }
