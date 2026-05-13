@@ -10,9 +10,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* =========================
-   FONTS
-========================= */
+/* шрифты */
 @font-face {
   font-family: "TheSeasons";
   src: url("Fonts/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
@@ -27,9 +25,7 @@ html, body {
   font-style: normal;
 }
 
-/* =========================
-   BODY
-========================= */
+/* body*/
 body {
   background: #FFF1F6;
   font-family: sans-serif;
@@ -37,18 +33,14 @@ body {
   padding-top: 120px;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+/* container */
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 40px;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* header */
 .header {
   position: fixed;
   top: 0;
@@ -97,9 +89,7 @@ body {
   justify-self: end;
 }
 
-/* =========================
-   HERO
-========================= */
+/* hero */
 .hero {
   position: relative;
   overflow: hidden;
@@ -160,9 +150,7 @@ body {
   box-shadow: 0 10px 20px rgba(217, 75, 135, 0.3);
 }
 
-/* =========================
-   TICKER
-========================= */
+/* бегущая строка */
 .ticker {
   position: absolute;
   bottom: 0;
@@ -193,18 +181,14 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* =========================
-   SECTIONS
-========================= */
+
 h2 {
   font-family: "TheSeasons", sans-serif;
   color: #d94b87;
   font-size: 28px;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* товары */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -246,9 +230,7 @@ h2 {
   margin: 10px 0;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* кнопк*/
 .btn {
   background: #ff4f93;
   color: white;
@@ -274,9 +256,7 @@ h2 {
   font-size: 12px;
 }
 
-/* =========================
-   REVIEWS
-========================= */
+/* отзывы */
 .review-item {
   display: flex;
   align-items: center;
@@ -310,9 +290,7 @@ h2 {
   font-size: 14px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* про нас */
 .about {
   padding: 60px 0;
 }
@@ -378,9 +356,7 @@ h2 {
   font-weight: bold;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* footer */
 .footer {
   height: 200px;
   background: #d96b9d;
@@ -410,9 +386,7 @@ h2 {
   text-align: center;
 }
 
-/* =========================
-   AUTH PAGE
-========================= */
+
 .auth-body {
   padding-top: 0 !important;
   margin: 0;
@@ -548,9 +522,7 @@ h2 {
   opacity: 0.7;
 }
 
-/* =========================
-   MENU BUTTON + CART
-========================= */
+
 .menu-btn {
   background: #ff4f93;
   color: white;
@@ -586,9 +558,7 @@ h2 {
   background: #d94b87;
 }
 
-/* =========================
-   POPUP MENU
-========================= */
+
 .menu-popup {
   position: fixed;
   inset: 0;
@@ -675,9 +645,7 @@ h2 {
   }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
 @media (max-width: 1024px) {
   .header-inner {
     grid-template-columns: 1fr auto;
@@ -793,9 +761,7 @@ h2 {
   }
 }
 
-/* =========================
-   SCROLL ANIMATIONS
-========================= */
+
 .scroll-animate {
   opacity: 0;
   transform: translateY(35px);
