@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Lip Oil",
+    "price": 14.5,
+    "imageUrl": "images/lipoil.jpg",
+    "section": "bestsellers"
+  },
+  {
+    "id": 2,
+    "title": "Soft Blush",
+    "price": 14.5,
+    "imageUrl": "images/f54109e055d3e9d7b4f0957e534b3a22.jpg",
+    "section": "bestsellers"
+  },
+  {
+    "id": 3,
+    "title": "Glossy Tint",
+    "price": 14.5,
+    "imageUrl": "images/b14ea28f019a244237017a7fc2bbf567.jpg",
+    "section": "bestsellers"
+  },
+  {
+    "id": 4,
+    "title": "Rom&nd eyeshadow palette",
+    "price": 14.5,
+    "imageUrl": "images/d818f393fb35bf5618daffd949e95c56.jpg",
+    "section": "collection"
+  },
+  {
+    "id": 5,
+    "title": "Rom&nd eyeshadow palette",
+    "price": 14.5,
+    "imageUrl": "images/888971529bcabe2fd025e5471af518a6.jpg",
+    "section": "collection"
+  },
+  {
+    "id": 6,
+    "title": "Rom&nd eyeshadow palette",
+    "price": 14.5,
+    "imageUrl": "images/bab133236a04d51dcbd89bef76a7a92d.jpg",
+    "section": "collection"
+  }
+]
