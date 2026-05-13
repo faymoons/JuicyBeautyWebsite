@@ -61,89 +61,31 @@
 
     <section class="hero" aria-label="Головний банер акції">
       <div class="container hero-inner-wrapper">
-
         <div class="hero-inner scroll-animate">
-          <h1>Купити корейську косметику та K-Beauty в Україні</h1>
-          <p>
-            Нова колекція Flower Knows вже доступна. Встигни замовити та отримай знижку!
-          </p>
-        </div>
+  <h1 id="heroTitle"></h1>
+  <p id="heroText"></p>
+       </div>
 
-        <a href="#shop" class="btn big hero-standalone-btn scroll-animate scroll-delay-1" aria-label="Перейти до каталогу та замовити косметику">
-          ЗАМОВИТИ!
-        </a>
+        <a href="#shop" id="heroBtn" class="btn big hero-standalone-btn scroll-animate scroll-delay-1"></a>
 
       </div>
 
       <div class="ticker" aria-label="Акційний текст">
-        <div class="ticker-track">
-          <span>ВСТИГНИ ЗАМОВИТИ ДО 67.67 ЧИСЛА І ОТРИМАЙ ЗНИЖКУ 67 У ПОДАРУНОК</span>
-          <span>ВСТИГНИ ЗАМОВИТИ ДО 67.67 ЧИСЛА І ОТРИМАЙ ЗНИЖКУ 67 У ПОДАРУНОК</span>
-          <span>ВСТИГНИ ЗАМОВИТИ ДО 67.67 ЧИСЛА І ОТРИМАЙ ЗНИЖКУ 67 У ПОДАРУНОК</span>
-          <span>ВСТИГНИ ЗАМОВИТИ ДО 67.67 ЧИСЛЛА І ОТРИМАЙ ЗНИЖКУ 67 У ПОДАРУНОК</span>
-        </div>
+        <div class="ticker-track" id="tickerTrack"></div>
       </div>
     </section>
 
     <section class="bestsellers scroll-animate" id="shop" aria-label="Популярна азійська косметика">
       <div class="container">
         <h2>Bestsellers — корейська косметика та K-Beauty</h2>
-
-        <div class="cards">
-
-          <article class="card scroll-animate scroll-delay-1">
-            <img src="images/lipoil.jpg" alt="Корейський Lip Oil для блиску та зволоження губ">
-            <p class="card-title">Lip Oil</p>
-            <p class="price">14.50$</p>
-            <button class="btn small" aria-label="Купити Lip Oil">BUY</button>
-          </article>
-
-          <article class="card scroll-animate scroll-delay-2">
-            <img src="images/f54109e055d3e9d7b4f0957e534b3a22.jpg" alt="Румʼяна Soft Blush з ніжним рожевим відтінком">
-            <p class="card-title">Soft Blush</p>
-            <p class="price">14.50$</p>
-            <button class="btn small" aria-label="Купити Soft Blush">BUY</button>
-          </article>
-
-          <article class="card scroll-animate scroll-delay-3">
-            <img src="images/b14ea28f019a244237017a7fc2bbf567.jpg" alt="Корейський Glossy Tint — стійкий блиск для губ">
-            <p class="card-title">Glossy Tint</p>
-            <p class="price">14.50$</p>
-            <button class="btn small" aria-label="Купити Glossy Tint">BUY</button>
-          </article>
-
-        </div>
+        <div class="cards" id="bestsellersCards"></div>
       </div>
     </section>
 
     <section class="collection scroll-animate" id="collection" aria-label="Нова колекція декоративної косметики">
       <div class="container">
         <h2>New Collection — японська та корейська декоративна косметика</h2>
-
-        <div class="cards">
-
-          <article class="card scroll-animate scroll-delay-1">
-            <img src="images/d818f393fb35bf5618daffd949e95c56.jpg" alt="Rom&nd eyeshadow palette — корейська палетка тіней для очей">
-            <p class="card-title">Rom&nd eyeshadow palette</p>
-            <p class="price">14.50$</p>
-            <button class="btn small" aria-label="Купити Rom&nd eyeshadow palette">BUY</button>
-          </article>
-
-          <article class="card scroll-animate scroll-delay-2">
-            <img src="images/888971529bcabe2fd025e5471af518a6.jpg" alt="Rom&nd eyeshadow palette — K-Beauty палетка для натурального макіяжу">
-            <p class="card-title">Rom&nd eyeshadow palette</p>
-            <p class="price">14.50$</p>
-            <button class="btn small" aria-label="Купити Rom&nd eyeshadow palette">BUY</button>
-          </article>
-
-          <article class="card scroll-animate scroll-delay-3">
-            <img src="images/bab133236a04d51dcbd89bef76a7a92d.jpg" alt="Rom&nd eyeshadow palette — корейська косметика для сяйва">
-            <p class="card-title">Rom&nd eyeshadow palette</p>
-            <p class="price">14.50$</p>
-            <button class="btn small" aria-label="Купити Rom&nd eyeshadow palette">BUY</button>
-          </article>
-
-        </div>
+        <div class="cards" id="collectionCards"></div>
       </div>
     </section>
 
@@ -230,39 +172,4 @@
     </div>
   </footer>
 
-  <script>
-    function openMenu() {
-      document.getElementById("menuPopup").classList.add("active");
-    }
-
-    function closeMenu() {
-      document.getElementById("menuPopup").classList.remove("active");
-    }
-
-    document.addEventListener("click", function(event) {
-      const popup = document.getElementById("menuPopup");
-      const content = document.querySelector(".menu-popup-content");
-
-      if (popup.classList.contains("active") && !content.contains(event.target) && !event.target.classList.contains("menu-btn")) {
-        closeMenu();
-      }
-    });
-
-    // SCROLL ANIMATION
-    const animatedItems = document.querySelectorAll(".scroll-animate");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, {
-      threshold: 0.15
-    });
-
-    animatedItems.forEach(item => observer.observe(item));
-  </script>
-
-</body>
-</html>
+ 
